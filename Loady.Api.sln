@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loady.Api", "Loady.Api\Loady.Api.csproj", "{D9561E67-EAB9-4475-877D-39E11A28F157}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loady.Api", "Loady.Api\Loady.Api.csproj", "{D9561E67-EAB9-4475-877D-39E11A28F157}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{304BA5DB-DD11-4CC6-9A06-FDCD16D914A7}"
+	ProjectSection(SolutionItems) = preProject
+		main.tf = main.tf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
