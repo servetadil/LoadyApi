@@ -4,7 +4,7 @@ provider "azurerm" {
 }
 
 terraform {
-    backend = "azurerm" {
+    backend "azurerm" {
         resource_group_name  = "tf_loady_storage"
         storage_account_name = "tfloadystorage"
         container_name       = "tfstatefilestorage"
