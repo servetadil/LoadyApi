@@ -3,6 +3,15 @@ provider "azurerm" {
 	features {}
 }
 
+terraform {
+    backend = "azurerm" {
+        resource_group_name  = "tf_loady_storage"
+        storage_account_name = "tfloadystorage"
+        container_name       = "tfstatefilestorage"
+        key                  = "terraform.tfstate"
+    }
+}
+
 resource "azurerm_resource_group" "loady_rg" {
     name = "loadymainrg"
     location =  "West Europe"
