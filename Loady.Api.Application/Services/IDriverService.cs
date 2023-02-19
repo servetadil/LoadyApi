@@ -1,9 +1,9 @@
-﻿using Loady.Api.Core.Entities;
+﻿using Loady.Api.Application.Dto;
 
 namespace Loady.Api.Application.Services
 {
     public interface IDriverService
     {
-        Task<IEnumerable<Driver>> GetByCity(string cityName);
+        Task<IEnumerable<DriverDto>> GetByCity(string cityName);
     }
 }

@@ -1,6 +1,8 @@
+using FluentValidation;
+using Loady.Api.Application.Exceptions;
+using Loady.Api.Application.Model;
 using Loady.Api.Application.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 
 namespace Loady.Api.Controllers
@@ -8,22 +10,30 @@ namespace Loady.Api.Controllers
     [ApiController]
     public class DriverController : ControllerBase
     {
-        private readonly ILogger<DriverController> _logger;
+        private IValidator<GetByCityQueryModel> _validator;
         IDriverService _driverService;
+
         public DriverController(
-            ILogger<DriverController> logger,
+            IValidator<GetByCityQueryModel> validator,
             IDriverService driverService)
         {
-            _logger = logger;
+            _validator = validator;
             _driverService = driverService;
         }
 
         [HttpGet]
-        [Route("Driver/GetBy")]
-        public async Task<IActionResult> GetBy(string cityName)
+        [Route("Driver/GetByCity")]
+        [Produces("application/json")]
+        public async Task<IActionResult> GetByCity([FromQuery] GetByCityQueryModel model)
         {
-            var drivers = await _driverService.GetByCity(cityName);
-            return Ok(drivers);
+           var validator =  await _validator.ValidateAsync(model);
+
+            if (!validator.IsValid)
+            {
+               throw new CustomValidationException(validator.Errors);
+            }
+
+            return Ok(await _driverService.GetByCity(model.City));
         }
     }
 }
