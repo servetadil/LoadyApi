@@ -1,3 +1,5 @@
+using System;
+
 namespace Loady.Api
 {
     public class WeatherForecast
