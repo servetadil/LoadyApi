@@ -34,21 +34,22 @@
 ### Azure Infrastructure with Terraform
 This project uses Terraform to create infrastructure on Microsoft Azure. This README provides an overview of the project and instructions on how to use it.
 
-Project Structure
+#### Project Structure
 The project has the following structure:
 
 .
 ├── main.tf
 ├── terraform.tfstate
 
-main.tf: This file contains the Terraform code to create the infrastructure on Azure.
-terraform.tfstate: This file contains the state of the infrastructure created by Terraform.
+main.tf: This file contains the Terraform code to create the infrastructure on Azure.<br />
+terraform.tfstate: This file contains the state of the infrastructure created by Terraform.<br />
 
-Prerequisites
+#### Prerequisites<br />
 Before you can use this project, you need to install the following tools:
 
-Terraform
-Azure CLI
+- Terraform <br/>
+- Azure CLI <br/>
+
 You also need to have an active Azure subscription and an Azure service principal with contributor access to the subscription.
 
 
