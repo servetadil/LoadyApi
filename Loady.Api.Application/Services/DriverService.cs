@@ -19,7 +19,7 @@ namespace Loady.Api.Application.Services
         public async Task<IEnumerable<DriverDto>> GetByCity(string cityName)
         {
 
-            var drivers = await _driverRepository.FilterBy(x => x.Location.City == cityName);
+            var drivers = await _driverRepository.FilterBy(x => x.Location.City.ToLower() == cityName.ToLower());
 
             if (!drivers.Any())
             {
