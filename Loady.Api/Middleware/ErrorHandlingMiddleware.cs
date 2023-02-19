@@ -47,6 +47,10 @@ namespace Loady.Api.Middleware
                     code = StatusCodes.Status400BadRequest;
                     message = ex.Message;
                     break;
+                case NotFoundException e:
+                    code = StatusCodes.Status404NotFound;
+                    message = ex.Message;
+                    break;
                 default:
                     // unhandled error
                     code = StatusCodes.Status500InternalServerError;

@@ -12,14 +12,14 @@ using Xunit;
 
 namespace Loady.Api.Core.UnitTests
 {
-    public class UnitTest1
+    public class BaseRepositoryTests
     {
         private Mock<MongoClient> _mongoClientMock;
         private Mock<IMongoDatabase> _database;
         private Mock<IMongoCollection<Driver>> _mockCollection;
         private BaseRepository<Driver> _baseRepository;
         private Mock<IConfiguration> _configurationMock;
-        public UnitTest1()
+        public BaseRepositoryTests()
         {
             _mongoClientMock = new Mock<MongoClient>();
             _configurationMock = new Mock<IConfiguration>();
