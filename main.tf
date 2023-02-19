@@ -78,3 +78,10 @@ resource "azurerm_cosmosdb_account" "cosmosdb" {
     failover_priority = 0
   }
 }
+
+resource "azurerm_cosmosdb_mongo_database" "loadyapidb" {
+  name                = "loadyapidb-driverstorage-db"
+  resource_group_name = data.azurerm_cosmosdb_account.cosmosdb.resource_group_name
+  account_name        = data.azurerm_cosmosdb_account.cosmosdb.name
+  throughput          = 400
+}
