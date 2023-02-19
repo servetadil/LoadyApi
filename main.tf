@@ -12,6 +12,11 @@ terraform {
     }
 }
 
+variable "imagebuild" {
+  type        = string
+  description = "Latest Image Build"
+}
+
 resource "azurerm_resource_group" "loady_rg" {
     name = "loadymainrg"
     location =  "West Europe"
@@ -27,7 +32,7 @@ resource "azurerm_container_group" "loady_cg" {
 
   container {
         name    = "loadyapi"
-        image   = "servetadil/loadyapiassesment"
+        image   = "servetadil/loadyapiassesment:${var.imagebuild}"
         cpu = "1"
         memory = "1"
         ports {
