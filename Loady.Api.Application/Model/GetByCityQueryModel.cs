@@ -1,9 +1,4 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Loady.Api.Application.Model
 {
@@ -17,6 +12,8 @@ namespace Loady.Api.Application.Model
         public GetByCityQueryModelValidator()
         {
             RuleFor(x => x.City).NotNull();
+            RuleFor(x => x.City).Matches("[A-Z]");
+            RuleFor(x => x.City).Matches("[a-z]");
             RuleFor(x => x.City).Length(0, 100);
         }
     }
