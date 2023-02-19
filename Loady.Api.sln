@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loady.Api.Core", "Loady.Api
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loady.Api.Application.UnitTests", "Loady.Api.Application.UnitTests\Loady.Api.Application.UnitTests.csproj", "{054641CF-C66D-47D0-A447-DAACE01E2DEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loady.Api.Core.UnitTests", "Loady.Api.Core.UnitTests\Loady.Api.Core.UnitTests.csproj", "{F5676F51-770D-4CB7-8833-F66475D4C181}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{054641CF-C66D-47D0-A447-DAACE01E2DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{054641CF-C66D-47D0-A447-DAACE01E2DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{054641CF-C66D-47D0-A447-DAACE01E2DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5676F51-770D-4CB7-8833-F66475D4C181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5676F51-770D-4CB7-8833-F66475D4C181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5676F51-770D-4CB7-8833-F66475D4C181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5676F51-770D-4CB7-8833-F66475D4C181}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
